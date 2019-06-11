@@ -1,7 +1,7 @@
-const createCardsWrapper = () => {
- const $cardswrapper = document.createElement("section");
- $cardswrapper.classList.add("cards-wrapper");
-
+const createCardsWrapper = () => { 
+ const $cardsWrapper = document.createElement("section");
+ $cardsWrapper.classList.add("cards-wrapper");
+ 
  const $head = document.querySelector("head");
  const $style = document.createElement("style");
  $style.textContent = `
@@ -10,23 +10,19 @@ const createCardsWrapper = () => {
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 10px;
+    width: 100vw;
  }
-.cards-wrapper > .memory-card {
+.cards-wrapper > memory-card {
     margin-bottom: 10px;
  }
 `;
- $head.insertBefore($style, null)
-return $cardswrapper;
+ $head.insertBefore($style, null);
+
+$cardsWrapper.addEventListener('click', () => {         
+  store.qtdMemoryCardActive = $cardsWrapper.querySelectorAll(".memory-card.-active").length;
+
+ });
+
+return $cardsWrapper;
 }
 
-
-
-
-
-
-//  você criou
-//  const createCardsWrapper = () => {
-//     const $wrapperCards =`<section class="cards-wrapper"</section> `
-//   return $wrapperCards;
-//   }
-// depois na aula 24 video 6 você criou const $cardswrapper = document.createElement('section')
