@@ -9,19 +9,19 @@ const flatButton = (function(){
 
         $style.textContent = `
         .flat-button-${module._id}{
-          display: inline-block;
+          box-sizing: border-box;
+          display: inline-flex;
           background-color: ${active ? "#f25a70":"#dbcea7"};
           width: 180px;
           height: 176px;
           font-weight: bold;
           color: #fffcee;
           text-transform: uppercase;
+          justify-content: center;
+          padding-top: 60px;
+          
 
-          text-decoration: none;
-          text-align: center;  
-          padding-top: 60px; 
-          box-sizing: border-box;     
-        }        
+         }        
         `
         $head.insertAdjacentElement("beforeend", $style);
     
@@ -30,7 +30,7 @@ const flatButton = (function(){
     module.render = (text, active = false) => {
         module._id ++;
         module._style(active);
-        return `<a href ="" class="flat-button-${module._id}">${text}</a>`;
+        return `<button class="flat-button-${module._id}">${text}</button>`;
     }
 
     return {
