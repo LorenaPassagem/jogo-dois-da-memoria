@@ -7,17 +7,21 @@ module.style = () => {
 
    $style.textContent =`
      .email {
-        width: 340px;
-        opacity: 0.5;
-        border: solid 1px #3a4042;
-      }`
+       display: block;
+        width: 100%;
+        border-bottom: 2px solid rgba(58, 64, 66, 0.5);
+      }
+      .email + .labelCollab {
+         margin-top: 30px;
+      }
+      `
 
     $head.insertAdjacentElement("beforeend", $style);
    } 
      
-  module.render = () => {
+  module.render = (holder) => {
       module.style();
-      return `<input class="email" type="email" placeholder="Email"></input> `
+      return `<input class="email" type="email" placeholder="${holder}"></input> `
   } 
 
   return {
