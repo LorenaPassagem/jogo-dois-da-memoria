@@ -16,8 +16,8 @@ const buttonSent = (function(){
      cursor: pointer;
     }
 
-     .email + .buttonSent {
-      margin-top: 45px;
+    .email + .buttonSent {
+     margin-top: 45px;
 
     }    
     `

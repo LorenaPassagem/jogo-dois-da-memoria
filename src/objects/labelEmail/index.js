@@ -7,7 +7,7 @@ const labelEmail = (function (){
      
      $style.textContent = `
      .labelCollab {
-        display: block;
+       display: block;
        color: #3a4042;
        font-size: 16px;
        opacity:0.5;
