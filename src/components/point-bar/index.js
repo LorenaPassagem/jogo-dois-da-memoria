@@ -1,5 +1,6 @@
 const pointBar = (function(){
     const module = {};
+    
     module._style = function(){
         const $head = document.querySelector("head")
         const $style = document.createElement("style")

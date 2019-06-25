@@ -11,14 +11,17 @@ const formLogin = (function(){
         $labelPassword = labelEmail.render("Passaword");
         $inputPassaword = boxEmail.render("*****", "password");        
         $buttonSent = buttonSent.render("Login");
+        $iconEyes = iconEyes.render();
+        $linkCollab = linkCollab.render({href:"/", content:"Forget password ?"})
         
         return ` 
           ${$labelEmail}
           ${$boxEmail}          
          
           ${$labelPassword}
-          ${$inputPassaword}         
-          
+          ${$inputPassaword} 
+          ${$iconEyes}        
+          ${$linkCollab}
           ${$buttonSent}
                  
         `;

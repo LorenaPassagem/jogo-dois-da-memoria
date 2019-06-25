@@ -12,7 +12,9 @@ const formSignup = (function(){
         $inputPassaword = boxEmail.render({placeholder: "*******", type:"password"});
 
         $labelConformPassword = labelEmail.render("Confirm Passaword");
-        $inputConformPassword = boxEmail.render({placeholder:"******", type:"password"}); 
+        $inputConformPassword = boxEmail.render({placeholder:"******", type:"password"});
+        $iconEyes = iconEyes.render();
+    
                 
         $buttonSent = buttonSent.render("signup");
         
@@ -23,8 +25,10 @@ const formSignup = (function(){
           ${$inputUserName}
           ${$labelPassword}
           ${$inputPassaword}
+          ${$iconEyes}
           ${$labelConformPassword}   
           ${$inputConformPassword}
+          ${$iconEyes}
           ${$buttonSent}
                  
         `;
@@ -46,7 +50,7 @@ const formSignup = (function(){
         return `<form class="form-signup" action="" method="POST" >${module._children()} </form>`
     } 
     return {
-       render:module.render,
+       render:module.render
        
     };
 })();

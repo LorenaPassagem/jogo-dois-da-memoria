@@ -1,11 +1,12 @@
 (function(){
  const $root = document.querySelector("#root");
- $buttonlogin = flatButton.render("login");
- $buttonsigup = flatButton.render("signup");
+ $buttonlogin = flatButton.render("login", true);
+ $buttonsigup = flatButton.render("signup", false);
 
  $iconGueio = iconGueio.render();
- $hello = titleWelcome.title("Hello");
+ $hello = titleWelcome.title("Hello!");
  $avatarWrapper = avatarWrapper.render($iconGueio, $hello);
+ 
  $formLogin = formLogin.render()
 
  $root.insertAdjacentHTML("beforeend", $buttonlogin);
