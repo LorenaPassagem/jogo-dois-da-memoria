@@ -9,7 +9,7 @@ const formSignup = (function(){
         $inputUserName = boxEmail.render("User name", "text");
         
         $labelPassword = labelEmail.render("Passaword");
-        $inputPassaword = boxEmail.render("Password", "password");
+        $inputPassaword = boxEmail.render("*******", "password");
 
         $labelConformPassword = labelEmail.render("Confirm Passaword");
         $inputConformPassword = boxEmail.render("Confirm Passaword", "password"); 

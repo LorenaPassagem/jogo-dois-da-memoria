@@ -9,7 +9,7 @@ const formLogin = (function(){
         $inputConformPassword = boxEmail.render("Confirm Passaword", "password");
         
         $labelPassword = labelEmail.render("Passaword");
-        $inputPassaword = boxEmail.render("Password", "password");        
+        $inputPassaword = boxEmail.render("*****", "password");        
         $buttonSent = buttonSent.render("Login");
         
         return ` 
