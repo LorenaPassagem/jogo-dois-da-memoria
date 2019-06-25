@@ -19,7 +19,7 @@ const buttonSent = (function(){
     .email + .buttonSent {
      margin-top: 45px;
 
-    }    
+    }
     `
 
   $head.insertAdjacentElement("beforeend", $style);

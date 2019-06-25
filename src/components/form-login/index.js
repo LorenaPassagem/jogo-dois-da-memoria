@@ -1,30 +1,24 @@
-const formSignup = (function(){
+const formLogin = (function(){
     const module = {};
     
     module._children = () => {
-        $labelEmail = labelEmail.render("E-mail");        
-        $boxEmail = boxEmail.render("lorenapassagem@gmail.com", "email");           
+        $labelEmail = labelEmail.render("E-mail User Name");        
+        $boxEmail = boxEmail.render("lorenapassagem@gmail.com", "email");     
        
-        $labelUserName  = labelEmail.render("User Name");
-        $inputUserName = boxEmail.render("User name", "text");
+        $labelConformPassword = labelEmail.render("Confirm Passaword");
+        $inputConformPassword = boxEmail.render("Confirm Passaword", "password");
         
         $labelPassword = labelEmail.render("Passaword");
-        $inputPassaword = boxEmail.render("Password", "password");
-
-        $labelConformPassword = labelEmail.render("Confirm Passaword");
-        $inputConformPassword = boxEmail.render("Confirm Passaword", "password"); 
-                
-        $buttonSent = buttonSent.render("signup");
+        $inputPassaword = boxEmail.render("Password", "password");        
+        $buttonSent = buttonSent.render("Login");
         
         return ` 
           ${$labelEmail}
           ${$boxEmail}          
-          ${$labelUserName}
-          ${$inputUserName}
+         
           ${$labelPassword}
-          ${$inputPassaword}
-          ${$labelConformPassword}   
-          ${$inputConformPassword}
+          ${$inputPassaword}         
+          
           ${$buttonSent}
                  
         `;
