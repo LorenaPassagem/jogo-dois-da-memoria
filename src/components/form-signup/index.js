@@ -3,16 +3,16 @@ const formSignup = (function(){
     
     module._children = () => {
         $labelEmail = labelEmail.render("E-mail");        
-        $boxEmail = boxEmail.render("lorenapassagem@gmail.com", "email");           
+        $boxEmail = boxEmail.render({placeholder:"lorenapassagem@gmail.com", type:"email"});           
        
         $labelUserName  = labelEmail.render("User Name");
-        $inputUserName = boxEmail.render("User name", "text");
+        $inputUserName = boxEmail.render({placeholder:"User name"});
         
         $labelPassword = labelEmail.render("Passaword");
-        $inputPassaword = boxEmail.render("*******", "password");
+        $inputPassaword = boxEmail.render({placeholder: "*******", type:"password"});
 
         $labelConformPassword = labelEmail.render("Confirm Passaword");
-        $inputConformPassword = boxEmail.render("Confirm Passaword", "password"); 
+        $inputConformPassword = boxEmail.render({placeholder:"******", type:"password"}); 
                 
         $buttonSent = buttonSent.render("signup");
         

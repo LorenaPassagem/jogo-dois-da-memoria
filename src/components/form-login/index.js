@@ -2,7 +2,7 @@ const formLogin = (function(){
     const module = {};
     
     module._children = () => {
-        $labelEmail = labelEmail.render("E-mail User Name");        
+        $labelEmail = labelEmail.render("E-mail ou User Name");        
         $boxEmail = boxEmail.render("lorenapassagem@gmail.com", "email");     
        
         $labelConformPassword = labelEmail.render("Confirm Passaword");

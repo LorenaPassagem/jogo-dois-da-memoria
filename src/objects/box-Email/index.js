@@ -19,9 +19,10 @@ module.style = () => {
     $head.insertAdjacentElement("beforeend", $style);
    } 
      
-  module.render = (holder, type) => {
+  module.render = ({placeholder="", type="text"}) => {
       module.style();
-      return `<input class="email" type="${type}" placeholder="${holder}"></input> `
+      
+      return `<input class="email" type="${type}" placeholder="${placeholder}"></input> `
   } 
 
   return {
