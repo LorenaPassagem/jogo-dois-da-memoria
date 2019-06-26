@@ -14,8 +14,15 @@ const iconEyes = (function() {
            text-indent: -9999px;
            width:24px;
            height:15px;
-           
-        }`
+           margin-left: auto;
+           transform: translateY(-110%);
+           opacity:0.5;           
+        }
+
+        .icon-eyes.-active {
+          opacity: 1;
+        }
+        `
        $head.insertAdjacentElement("beforeend", $style); 
     }
     module.handle = function() {
@@ -23,8 +30,10 @@ const iconEyes = (function() {
        const $input = document.querySelector(`#${attrFor}`);
 
        if ($input.getAttribute("type") === "text"){
+         this.classList.remove("-active")
         $input.setAttribute("type","password");
        } else {        
+        this.classList.add("-active")
         $input.setAttribute("type", "text");
        }
     }
