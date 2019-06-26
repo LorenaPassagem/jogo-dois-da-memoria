@@ -9,9 +9,9 @@ const formLogin = (function(){
         $inputConformPassword = boxEmail.render("Confirm Passaword", "password");
         
         $labelPassword = labelEmail.render("Passaword");
-        $inputPassaword = boxEmail.render("*****", "password");        
+        $inputPassaword = boxEmail.render({id:"password", placeholder:"*****", type:"password"});        
         $buttonSent = buttonSent.render("Login");
-        $iconEyes = iconEyes.render();
+        $iconEyes = iconEyes.render({attrFor:"password"});
         $linkCollab = linkCollab.render({href:"/", content:"Forget password ?"})
         
         return ` 

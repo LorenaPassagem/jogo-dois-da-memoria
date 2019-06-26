@@ -12,8 +12,8 @@ const formSignup = (function(){
         $inputPassaword = boxEmail.render({placeholder: "*******", type:"password"});
 
         $labelConformPassword = labelEmail.render("Confirm Passaword");
-        $inputConformPassword = boxEmail.render({placeholder:"******", type:"password"});
-        $iconEyes = iconEyes.render();
+        $inputConformPassword = boxEmail.render({id:"password", placeholder:"******", type:"password"});
+        $iconEyes = iconEyes.render({attrFor:"password"});
     
                 
         $buttonSent = buttonSent.render("signup");
