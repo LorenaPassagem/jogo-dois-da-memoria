@@ -6,7 +6,7 @@ module._style =() => {
  $style = document.createElement("style");
 
  $style.textContent=`
-   .avatar-Wrapper{       
+   .avatar-wrapper{       
        text-align: center; 
        transform: translateY(-40%);    
     }`
@@ -15,7 +15,7 @@ module._style =() => {
 }
 module.render = (...$params) => {
   module._style();
-  return `<div class = "avatar-Wrapper">${$params.join("")}</div>`
+  return `<div class = "avatar-wrapper">${$params.join("")}</div>`
 }
 
 return {

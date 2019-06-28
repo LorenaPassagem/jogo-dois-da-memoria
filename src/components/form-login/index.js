@@ -10,14 +10,13 @@ const formLogin = (function(){
         
         $labelPassword = labelEmail.render("Passaword");
         $inputPassaword = boxEmail.render({id:"password", placeholder:"*****", type:"password"});        
-        $buttonSent = buttonSent.render("Login");
+        $buttonSent = buttonSent.render({content:"Login", path:"game"});
         $iconEyes = iconEyes.render({attrFor:"password"});
-        $linkCollab = linkCollab.render({href:"/", content:"Forget password ?"})
+        $linkCollab = linkCollab.render({href:"/", content:"Forget password ?"});
         
         return ` 
           ${$labelEmail}
-          ${$boxEmail}          
-         
+          ${$boxEmail}       
           ${$labelPassword}
           ${$inputPassaword} 
           ${$iconEyes}        
@@ -43,7 +42,7 @@ const formLogin = (function(){
         return `<form class="form-signup" action="" method="POST" >${module._children()} </form>`
     } 
     return {
-       render:module.render,
+       render:module.render
        
     };
 })();

@@ -1,4 +1,4 @@
-const formSignup = (function(){
+var formSignup = (function(){
     const module = {};
     
     module._children = () => {
@@ -16,7 +16,7 @@ const formSignup = (function(){
         $iconEyes = iconEyes.render({attrFor:"password"});
     
                 
-        $buttonSent = buttonSent.render("signup");
+        $buttonSent = buttonSent.render({content:"signup", path:"login"});
         
         return ` 
           ${$labelEmail}

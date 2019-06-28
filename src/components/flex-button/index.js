@@ -18,22 +18,28 @@ const flatButton = (function(){
           color: #fffcee;
           text-transform: uppercase;
           justify-content: center;
-          padding-top: 60px;
-          
-
-         }        
+          padding-top: 60px;  
+        }        
         `
         $head.insertAdjacentElement("beforeend", $style);
+     }
+
+        module.handleClick  = (path) => {            
+            location.hash = `#/${path}`;
+            location.reload(true);
+           
+        }
+         
     
-    }     
-    
-    module.render = (text, active = false) => {
+    module.render = (text, active = false, path ="") => {
         module._id ++;
         module._style(active);
-        return `<button class="flat-button-${module._id}">${text}</button>`;
+        return `<button class="flat-button-${module._id}" 
+                onClick="flatButton.handleClick('${path}')">${text}</button>`;
     }
 
     return {
-        render:module.render
+        render:module.render,
+        handleClick: module.handleClick
     }
 })();

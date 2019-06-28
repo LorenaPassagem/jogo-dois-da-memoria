@@ -25,24 +25,22 @@ const buttonSent = (function(){
   $head.insertAdjacentElement("beforeend", $style);
 }
 
-module._checkEmail = () => {           
-    // const adressEmail = document.querySelector(".buttonSent");
-    // const contactEmail = String(adressEmail.value);
-    // const teste = /@/;
-    // const n = contactEmail.test(teste);
-    // console.log(n) //= false ? "Email invalido" : "email valido");   
+module._handleClick = (event, path) => {           
+ event.preventDefault();
+ location.hash = `#/${path}`;
+ location.reload(true);
 }
   
-module.render = content => {
+module.render = ({content="", path= ""}) => {
     module.style();
     return `
            <input class="buttonSent" type="submit" value=${content}
-           onClick="buttonSent._checkEmail()">
+           onClick="buttonSent.handleClick(event, '${path}')">
            `
 }
 
     return {
        render: module.render,
-       checkEmail: module._checkEmail
+       handleClick: module._handleClick
     }
 })();

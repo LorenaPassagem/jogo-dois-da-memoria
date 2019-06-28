@@ -1,7 +1,7 @@
-(function (){
+const signup = (function (){
     const $root = document.querySelector("#root");
-    $flatButton = flatButton.render("login");
-    $signupButton = flatButton.render("signup", true);
+    $flatButton = flatButton.render("login", false, "login");
+    $signupButton = flatButton.render("signup", true, "signup");
    
     $formSignup = formSignup.render();
    
@@ -27,4 +27,4 @@
     $root.insertAdjacentHTML("beforeend", $formSignup);
    
       
-})();
+});
