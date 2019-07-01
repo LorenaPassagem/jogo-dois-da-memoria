@@ -33,10 +33,8 @@ module._handleClick = (event, path) => {
   
 module.render = ({content="", path= ""}) => {
     module.style();
-    return `
-           <input class="buttonSent" type="submit" value=${content}
-           onClick="buttonSent.handleClick(event, '${path}')">
-           `
+    return `<input class="buttonSent" type="submit" value=${content}
+            onClick="buttonSent.handleClick(event, '${path}')">`
 }
 
     return {

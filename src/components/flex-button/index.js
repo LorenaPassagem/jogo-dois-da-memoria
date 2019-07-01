@@ -6,7 +6,6 @@ const flatButton = (function(){
         const $head = document.querySelector("head");
         const $style = document.createElement("style");
      
-
         $style.textContent = `
         .flat-button-${module._id}{
           box-sizing: border-box;
@@ -22,13 +21,12 @@ const flatButton = (function(){
         }        
         `
         $head.insertAdjacentElement("beforeend", $style);
-     }
+    }
 
-        module.handleClick  = (path) => {            
-            location.hash = `#/${path}`;
-            location.reload(true);
-           
-        }
+    module.handleClick  = (path) => {            
+        location.hash = `#/${path}`;
+        location.reload(true);           
+    }
          
     
     module.render = (text, active = false, path ="") => {
@@ -40,6 +38,6 @@ const flatButton = (function(){
 
     return {
         render:module.render,
-        handleClick: module.handleClick
+        handleClick:module.handleClick
     }
 })();
